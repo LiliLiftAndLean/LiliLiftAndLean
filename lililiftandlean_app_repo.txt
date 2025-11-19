@@ -146,6 +146,3 @@ function uploadPhotos() {
 }
 ```
 
----
-
-Drag the `lililiftandlean` folder into GitHub and deploy on Netlify with **no build command** and **publish directory `/`**. Your app will be fully live and functional.
