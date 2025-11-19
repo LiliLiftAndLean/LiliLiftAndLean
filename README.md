@@ -1,4 +1,8 @@
 ## Hi there 👋
+ - If you're coming from tik tok, welcome:)
+ - Im currently working on creating the BEST Wellness App for yall to get you Lifting and LEAN.
+ - Stay tuned <3
+   
 
 <!--
 **LiliLiftAndLean/LiliLiftAndLean** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
