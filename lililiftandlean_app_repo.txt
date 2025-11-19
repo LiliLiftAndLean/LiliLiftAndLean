@@ -1,4 +1,3 @@
-Here is the fully updated GitHub/Netlify-ready version of your app with the correct name **LiliLiftAndLean**.
 
 Folder structure:
 ```
