@@ -1,0 +1,152 @@
+Here is the fully updated GitHub/Netlify-ready version of your app with the correct name **LiliLiftAndLean**.
+
+Folder structure:
+```
+lililiftandlean/
+│
+├── index.html
+├── style.css
+└── app.js
+```
+
+---
+
+**index.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiliLiftAndLean Wellness Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="title">LiliLiftAndLean Wellness Tracker</h1>
+
+  <section class="card">
+    <h2>Body Measurements</h2>
+
+    <label>Waist (inches)</label>
+    <input type="number" id="waist" />
+
+    <label>Hips (inches)</label>
+    <input type="number" id="hips" />
+
+    <label>Chest (inches)</label>
+    <input type="number" id="chest" />
+
+    <button onclick="saveMeasurements()">Save Measurements</button>
+
+    <p id="measurement-output"></p>
+  </section>
+
+  <section class="card">
+    <h2>Progress Photos</h2>
+
+    <input type="file" id="photoInput" accept="image/*" multiple />
+    <button onclick="uploadPhotos()">Upload Photos</button>
+
+    <div id="photo-gallery" class="gallery"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
+```
+
+---
+
+**style.css**
+```css
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #d4af37;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #fff8dc;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #d4af37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.gallery {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+```
+
+---
+
+**app.js**
+```javascript
+function saveMeasurements() {
+  const waist = document.getElementById("waist").value;
+  const hips = document.getElementById("hips").value;
+  const chest = document.getElementById("chest").value;
+
+  const output = `Saved: Waist ${waist}", Hips ${hips}", Chest ${chest}"`;
+  document.getElementById("measurement-output").innerText = output;
+}
+
+function uploadPhotos() {
+  const input = document.getElementById("photoInput");
+  const gallery = document.getElementById("photo-gallery");
+
+  Array.from(input.files).forEach(file => {
+    const img = document.createElement("img");
+    img.src = URL.createObjectURL(file);
+    gallery.appendChild(img);
+  });
+}
+```
+
+---
+
+Drag the `lililiftandlean` folder into GitHub and deploy on Netlify with **no build command** and **publish directory `/`**. Your app will be fully live and functional.
